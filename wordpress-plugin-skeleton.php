@@ -52,6 +52,7 @@ function pluginAdminLinks(){
 }
 
 
+
 /*function wp_init_plgn_mod()
 {
     var_dump(is_page('share'));exit;
