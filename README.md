@@ -2,6 +2,9 @@
 
 It helps in increase your productivity while developing plugins for Wordpress.  Currently has the following features which helps for building secure plugin in similar to MVC pattern for easy and flexible code management. 
 
+# PROJECT IS INCOMPLETE - YET TO DO EVERYTHING
+Estimated Completion date - 28th JULY 2016
+
 ## INSTALLATION
 1. Download and copy files to your `wp-content/plugins/wordpress-plugin-skeleton` folder
 2. Generate Plugin details like "Plugin Name, Description, Author, Namespace for plugin"
