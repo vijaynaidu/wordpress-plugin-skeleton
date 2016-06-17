@@ -27,7 +27,18 @@ class adminMenu{
     public function adminMenuPages(){
         $files = $this->filesList();
         foreach($files as $file){
-            $fileAnnotations = $this->getFileDocBlock($file);
+            //$fileAnnotations = $this->getFileDocBlock($file);
+            $defaultAnnotationData = array(
+                'parent_slug'=>'',
+                'slug'=>'',
+                'type'=>'',
+                'page_title'=>'',
+                'menu_title'=>'',
+                'permission'=>'',
+                'icon_url'=>'',
+                'position'=>"null",
+            );
+            $fileAnnotations = gear::getFileDocBlock($file, 'add_menu_page', $defaultAnnotationData);
             //echo "<pre>";var_dump($fileAnnotations);exit;
             $fileName = pathinfo($file, PATHINFO_FILENAME);
             require_once $file;
@@ -51,7 +62,18 @@ class adminMenu{
         $files = $this->filesList('adminSubMenu');
         $arrSort = array();
         foreach($files as $file){
-            $fileAnnotations = $this->getFileDocBlock($file);
+            //$fileAnnotations = $this->getFileDocBlock($file);
+            $defaultAnnotationData = array(
+                'parent_slug'=>'',
+                'slug'=>'',
+                'type'=>'',
+                'page_title'=>'',
+                'menu_title'=>'',
+                'permission'=>'',
+                'icon_url'=>'',
+                'position'=>"null",
+            );
+            $fileAnnotations = gear::getFileDocBlock($file, 'add_submenu_page', $defaultAnnotationData);
             $pos = !empty($fileAnnotations['position'])?$fileAnnotations['position']:count($arrSort);
             $arrSort[] = array(
                 'position'=>$pos,
@@ -99,7 +121,7 @@ class adminMenu{
         return $annotations[1];
     }
 
-    public function getFileDocBlock($file = ""){
+    /*public function getFileDocBlock($file = ""){
         $annotationData = array(
             'parent_slug'=>'',
             'slug'=>'',
@@ -160,7 +182,7 @@ class adminMenu{
         }
 
         return $annotationData;
-    }
+    }*/
 }
 
 

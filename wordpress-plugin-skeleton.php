@@ -23,11 +23,11 @@ if(defined($pluginName)){
 
 define( $pluginName, true );
 define( $pluginName.'_VERSION', '0.1' );
-define( $pluginName.'_PLUGIN', __FILE__ );//Eg. /home/me/example.com/wp-content/plugins/vj-plugin/plugin.php
-define( $pluginName.'_PLUGIN_BASENAME', plugin_basename( constant($pluginName.'_PLUGIN') ) );//Eg. vj-plugin/plugin.php
-define( $pluginName.'_PLUGIN_NAME', trim( dirname( constant($pluginName.'_PLUGIN_BASENAME') ), '/' ) );//Eg. vj-plugin
-define( $pluginName.'_PLUGIN_DIR', untrailingslashit( dirname( constant($pluginName.'_PLUGIN') ) ) );//Eg. /home/me/example.com/wp-content/plugins/vj-plugin
-define( $pluginName.'_PLUGIN_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );//Eg. http://example.com/wp-content/plugins/vj-plugin
+define( $pluginName.'_PLUGIN', __FILE__ );//Eg. /home/me/example.com/wp-content/plugins/wordpress-plugin-skeleton/wordpress-plugin-skeleton.php
+define( $pluginName.'_PLUGIN_BASENAME', plugin_basename( constant($pluginName.'_PLUGIN') ) );//Eg. wordpress-plugin-skeleton/wordpress-plugin-skeleton.php
+define( $pluginName.'_PLUGIN_NAME', trim( dirname( constant($pluginName.'_PLUGIN_BASENAME') ), '/' ) );//Eg. wordpress-plugin-skeleton
+define( $pluginName.'_PLUGIN_DIR', untrailingslashit( dirname( constant($pluginName.'_PLUGIN') ) ) );//Eg. /home/me/example.com/wp-content/plugins/wordpress-plugin-skeleton
+define( $pluginName.'_PLUGIN_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );//Eg. http://example.com/wp-content/plugins/wordpress-plugin-skeleton
 
 $pPath = untrailingslashit( dirname( __FILE__ ) );
 require_once $pPath.DIRECTORY_SEPARATOR.$pluginSlug.DIRECTORY_SEPARATOR.'ignite.php';
@@ -47,11 +47,20 @@ $fbPageImporterClass->start(
     )
 );//Initializing the plugin.
 
-function pluginAdminLinks(){
-    add_menu_page('My Custom Page', 'My Custom Page', 'manage_options', 'my-top-level-slug');
-}
+/*
+ * Todo: Creating own slug pages.
+ * Todo: Create Plugin intro page show just after installation.
+ * Todo: Report about the installation.
+ * Todo: Create Custom Permalink structure.
+ * Todo: Create Action, Filters.
+ * Todo: Wordpress style of cleaning variables.
+ * Todo: Show developer page for displaying the configurable params Eg. Accessible ajax access action
+ * */
 
-
+//http://localhost/wordpress_test/wp-admin/admin-ajax.php?action=test
+add_action( 'wp_ajax_nopriv_test', function(){
+    var_dump('test');exit;
+} );
 
 /*function wp_init_plgn_mod()
 {
