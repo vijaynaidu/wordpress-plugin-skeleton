@@ -15,6 +15,5 @@ use wpPluginSkeletonClass\gear;
 class wpPluginSkeletonAdminMainMenu {
     public function ignite(){
         echo gear::renderAdminView('wp-plugin-skeleton');
-        //echo "@=Testing...";
     }
 }
