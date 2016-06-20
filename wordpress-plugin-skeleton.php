@@ -2,7 +2,7 @@
 /*
 Plugin Name: Wordpress Plugin Skeleton
 Plugin URI: http://www.vijaynaidu.co.in/
-Description: Facebook Page Importer by VijayNaidu.
+Description: Wordpress Plugin Skeleton by VijayNaidu.
 Author: Vijay M
 Text Domain: vijaynaidu
 Domain Path: /languages/
@@ -48,6 +48,7 @@ $fbPageImporterClass->start(
 );//Initializing the plugin.
 
 /*
+ * Todo: vjGrid
  * Todo: Creating own slug pages.
  * Todo: Create Plugin intro page show just after installation.
  * Todo: Report about the installation.
@@ -58,9 +59,6 @@ $fbPageImporterClass->start(
  * */
 
 //http://localhost/wordpress_test/wp-admin/admin-ajax.php?action=test
-add_action( 'wp_ajax_nopriv_test', function(){
-    var_dump('test');exit;
-} );
 
 /*function wp_init_plgn_mod()
 {

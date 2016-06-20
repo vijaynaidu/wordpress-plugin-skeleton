@@ -18,12 +18,12 @@ class gear{
                 if(!empty($fileDocComment['1'])){
                     //preg_match_all('#@(.*?)\n#s', $fileDocComment['1'], $annotations);
                     //preg_match_all('/(@+[a-zA-Z _]{3,}+[=]{1})+(.*)/', $fileDocComment['1'], $annotations);
-                    preg_match_all('/@+([a-zA-Z_]{3,})+[ =]+(.*)/', $fileDocComment['1'], $annotations);
+                    preg_match_all('/@+([a-zA-Z_]{2,})+[ =]+(.*)/', $fileDocComment['1'], $annotations);
                     //echo "<pre>"; var_dump($annotations);exit;
                     if(!empty($annotations['1']) && !empty($annotations['2'])){
                         $ini = 0;
                         foreach($annotations['1'] as $ant){
-                            preg_match('/[a-zA-Z_]{3,}/', $ant, $opt);
+                            preg_match('/[a-zA-Z_]{2,}/', $ant, $opt);
                             if(!empty($opt['0']) && isset($annotations['2'][$ini])){
                                 $key = strtolower($opt['0']);
                                 if(isset($annotationData[$key])){
@@ -46,7 +46,7 @@ class gear{
             }
         }
 
-        if($annotationData['position'] =="null"){
+        if(!empty($annotationData['position']) && $annotationData['position'] =="null"){
             $annotationData['position'] = null;
         }
 
