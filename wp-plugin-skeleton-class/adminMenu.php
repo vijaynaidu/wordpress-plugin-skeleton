@@ -21,8 +21,6 @@ class adminMenu{
     /*
      * Todo: Validate $fileAnnotations and do more effective way for "add_menu_page"
      * Todo: icon_url replace with matched defined variables.
-     * Todo: create basic html path for mvc structure
-     * Todo: work on admin_sub_menu
      * */
     public function adminMenuPages(){
         $files = $this->filesList();

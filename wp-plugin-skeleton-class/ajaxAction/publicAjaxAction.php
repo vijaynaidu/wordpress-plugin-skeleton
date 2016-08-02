@@ -4,7 +4,6 @@ namespace wpPluginSkeletonClass\ajaxAction;
 use wpPluginSkeletonClass\gear;
 
 /**
- * @do=test
  * @permission=public
  */
 class publicAjaxAction {

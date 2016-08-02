@@ -10,7 +10,7 @@ use wpPluginSkeletonClass\gear;
  * @type =main_menu
  * @permission=manage_options
  * @icon_url = __plugin_URL__/assets/images/gear.png
- * @position = null
+ * @position = 10
  */
 class wpPluginSkeletonAdminMainMenu {
     public function ignite(){

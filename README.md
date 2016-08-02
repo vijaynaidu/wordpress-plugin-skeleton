@@ -1,6 +1,6 @@
 # Wordpress Plugin Skeleton
 
-It helps in increase your productivity while developing plugins for Wordpress.  Currently has the following features which helps for building secure plugin in similar to MVC pattern for easy and flexible code management. 
+It helps in increasing your productivity while developing plugins for Wordpress.  Currently has the following features which helps for building secure plugin in similar to MVC pattern for easy and flexible code management.
 
 # PROJECT IS INCOMPLETE - YET TO DO EVERYTHING
 Estimated Completion date - 28th JULY 2016

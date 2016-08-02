@@ -22,7 +22,6 @@ class ajaxAction{
                 if(!empty($files['0'])){
                     $file = $files['0'];
                     $defaultAnnotationData = array(
-                        'do'=>'',
                         'permission'=>'',
                     );
                     $fileAnnotations = gear::getFileDocBlock($file, 'ajax_action', $defaultAnnotationData);
@@ -72,7 +71,7 @@ class ajaxAction{
             preg_match('/[a-zA-Z]{1,}/', $fNameOri, $extracted);
             if(!empty($extracted['0'])){
                 $fName = $extracted['0'];
-                if((dirname(__FILE__).DIRECTORY_SEPARATOR.$for.DIRECTORY_SEPARATOR.$fName.".php")){
+                if(file_exists(dirname(__FILE__).DIRECTORY_SEPARATOR.$for.DIRECTORY_SEPARATOR.$fName.".php")){
                     $files[] = dirname(__FILE__).DIRECTORY_SEPARATOR.$for.DIRECTORY_SEPARATOR.$fName.".php";
                 }
             }

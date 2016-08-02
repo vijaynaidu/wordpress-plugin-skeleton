@@ -25,7 +25,8 @@ define( $pluginName, true );
 define( $pluginName.'_VERSION', '0.1' );
 define( $pluginName.'_PLUGIN', __FILE__ );//Eg. /home/me/example.com/wp-content/plugins/wordpress-plugin-skeleton/wordpress-plugin-skeleton.php
 define( $pluginName.'_PLUGIN_BASENAME', plugin_basename( constant($pluginName.'_PLUGIN') ) );//Eg. wordpress-plugin-skeleton/wordpress-plugin-skeleton.php
-define( $pluginName.'_PLUGIN_NAME', trim( dirname( constant($pluginName.'_PLUGIN_BASENAME') ), '/' ) );//Eg. wordpress-plugin-skeleton
+define( $pluginName.'_PLUGIN_NAME', trim($pluginName) );//Eg. wordpress-plugin-skeleton
+//define( $pluginName.'_PLUGIN_NAME', trim( dirname( constant($pluginName.'_PLUGIN_BASENAME') ), '/' ) );//Eg. wordpress-plugin-skeleton
 define( $pluginName.'_PLUGIN_DIR', untrailingslashit( dirname( constant($pluginName.'_PLUGIN') ) ) );//Eg. /home/me/example.com/wp-content/plugins/wordpress-plugin-skeleton
 define( $pluginName.'_PLUGIN_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );//Eg. http://example.com/wp-content/plugins/wordpress-plugin-skeleton
 
@@ -58,7 +59,7 @@ $fbPageImporterClass->start(
  * Todo: Show developer page for displaying the configurable params Eg. Accessible ajax access action
  * */
 
-//http://localhost/wordpress_test/wp-admin/admin-ajax.php?action=test
+//http://localhost/wordpress_test/wp-admin/admin-ajax.php?action=ajx_wordpress_plugin_skeleton&do=test
 
 /*function wp_init_plgn_mod()
 {

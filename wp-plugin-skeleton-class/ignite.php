@@ -59,4 +59,10 @@ class ignite {
         $ajaxActionCls = new ajaxAction();
         $ajaxActionCls->ignite();
     }
+
+    public function devHelp(){
+        if($_SERVER['REMOTE_ADDR'] == '127.0.0.1'){
+            echo gear::renderAdminView('help/dev_help');
+        }
+    }
 }
