@@ -17,7 +17,7 @@ class ajaxAction{
         $ajaxName = skull::retrieve('ajax_action');
         if(!empty($_REQUEST['_wpnonce']) && wp_verify_nonce($_REQUEST['_wpnonce'], $ajaxName)){
             if(!empty($_REQUEST['do'])){
-                $do = wpcf7_sanitize_query_var($_REQUEST['do']);
+                $do = sanitize_text_field($_REQUEST['do']);
                 $files = $this->filesList($do);
                 if(!empty($files['0'])){
                     $file = $files['0'];
